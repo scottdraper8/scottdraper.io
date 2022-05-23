@@ -6,13 +6,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // IMPORT PAGES
 import Home from './pages/Home';
 import Exhibitions from './pages/Exhibitions';
-import KnowledgeBase from './pages/KnowledgeBase';
+import Learning from './pages/Learning';
 
 // IMPORT COMPONENTS
 import reportWebVitals from './reportWebVitals';
 
 // IMPORT STYLES
-import './styles/reset.css'
+import './styles/main.css';
+import './styles/reset.css';
 
 // CREATE APP
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,7 +23,7 @@ root.render(
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/exhibitions" element={<Exhibitions />} />
-                <Route path="/knowledge-base" element={<KnowledgeBase />} />
+                <Route path="/learning" element={<Learning />} />
             </Routes>
         </Router>
     </React.StrictMode>
