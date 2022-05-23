@@ -1,6 +1,5 @@
 // NODE DEPENDENCIES
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 // IMPORT STYLES
 import './styles.css';
@@ -8,11 +7,9 @@ import './styles.css';
 function Home() {
     return (
         <main>
-            <nav>
-                <Link to='/profiles'>profiles</Link>
-                <Link to='/exhibitions'>exhibitions</Link>
-                <Link to='/learning'>learning</Link>
-            </nav>
+            <h1>sorry, currently remodeling my site.</h1>
+            <img src='assets/elephant.png' alt='elephant logo' />
+            <h1>come back later to check it out!</h1>
         </main>
     );
 }

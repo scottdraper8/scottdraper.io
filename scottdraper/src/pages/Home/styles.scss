@@ -1,37 +1,49 @@
 main {
-    align-items: center;
     display: flex;
+    flex-direction: column;
     height: 100vh;
+    justify-content: space-between;
 
-    nav {
-        width: 100%;
+    h1 {
+        text-align: center;
 
-        a {
-            display: block;
-            font-size: 2rem;
-            margin: 5% 0;
-            padding: 2rem 0;
-            text-align: center;
-            width: 33.3%;
+        &:nth-of-type(1) {
+            margin-top: 10%;
         }
 
-        a:nth-of-type(1) {
-            margin-top: 0;
+        &:nth-of-type(2) {
+            margin-bottom: 10%;
         }
-        
-        a:nth-of-type(2) {
-            margin-left: 33.3%;
+    }
+
+    img {
+        filter: blur(0.75px) drop-shadow(0 0 1rem rgba(121, 121, 121, 0.8));
+        margin: 0 auto;
+        width: 15rem;
+        animation: glow 10s linear infinite;
+        transform: rotate(0);
+        transition: transform 0.5s ease;
+
+        &:hover {
+            cursor: pointer;
+            transform: rotate(-0.015turn);
         }
-        
-        a:nth-of-type(3) {
-            margin: 0 0 0 66.6%;
-        }
+    }
+
+    @keyframes glow {
+        0%   { filter: blur(0.75px) drop-shadow(0 0 1rem rgba(121, 121, 121, 0.8));    }
+        33%  { filter: blur(0.75px) drop-shadow(0 0 1.15rem rgba(117, 165, 129, 0.8)); }
+        66%  { filter: blur(0.75px) drop-shadow(0 0 1.15rem rgba(79, 104, 172, 0.8));  }
+        100% { filter: blur(0.75px) drop-shadow(0 0 1rem rgba(121, 121, 121, 0.8));    }
     }
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    main nav a {
-        font-size: 1.5rem;
-        padding: 1rem 0;
+    main h1:nth-of-type(1) {
+        margin-top: 30%;
     }
-  }
+
+    main h1:nth-of-type(2) {
+        margin-bottom: 30%;
+    }
+}

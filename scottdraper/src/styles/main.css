@@ -4,6 +4,7 @@
   font-family: 'Dosis', sans-serif; }
 
 html {
-  background-color: #264653; }
+  background: #264653;
+  background: linear-gradient(125deg, #264653 0%, #4d576c 100%); }
 
 /*# sourceMappingURL=main.css.map */
